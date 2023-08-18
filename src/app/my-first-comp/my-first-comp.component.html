@@ -1,6 +1,6 @@
 <div class="form-container">
   <h2>Simple Form</h2>
-  <form (ngSubmit)="onSubmit()">
+  <form> <!-- can remove --->
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" id="name" [(ngModel)]="name" name="name" required />
@@ -13,8 +13,8 @@
       <label for="message">Message:</label>
       <textarea type="message" id="message" name="message" row="4" [(ngModel)]="message" required></textarea>
     </div>
-    <button type="submit">Submit</button>
-  </form>
+    <button (click)="onSubmit()" type="submit">Submit</button>
+  </form> <!-- can remove --->
 
   <div>
     <h3>Form Data:</h3>
