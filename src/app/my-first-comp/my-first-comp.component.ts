@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MyFirstService} from '../services/my-first.service';
 
 @Component({
   selector: 'app-my-first-comp',
@@ -12,12 +13,17 @@ export class MyFirstCompComponent {
   isSubmitted: boolean = false;
   messages: Array<any> = [];
 
+  constructor(private services: MyFirstService) {
+    this.messages = services.getAllMessages()
+    this.isSubmitted = this.messages.length > 0
+  }
+
   deleteMessage(index: number) {
-    this.messages.splice(index, 1)
+    this.services.deleteMessage(index)
   }
   onSubmit() {
     this.isSubmitted = true;
-    this.messages.push({
+    this.services.insert({
       name: this.name,
       email: this.email,
       message: this.message,
