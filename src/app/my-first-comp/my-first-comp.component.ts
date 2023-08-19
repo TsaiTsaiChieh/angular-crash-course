@@ -12,6 +12,9 @@ export class MyFirstCompComponent {
   isSubmitted: boolean = false;
   messages: Array<any> = [];
 
+  deleteMessage(index: number) {
+    this.messages.splice(index, 1)
+  }
   onSubmit() {
     this.isSubmitted = true;
     this.messages.push({
