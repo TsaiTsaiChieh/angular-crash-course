@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 import {ProductRepresentation} from '../models/product-representation';
 
 @Injectable({
@@ -7,13 +7,16 @@ import {ProductRepresentation} from '../models/product-representation';
 })
 export class ProductService {
   private baseUrl = 'https://fakestoreapi.com/'
-  constructor( private http: HttpClient
-    ) { 
+  constructor(private http: HttpClient
+  ) {}
 
-    }
-
-  getAllProductWithLimit(limit: number = 5)  {
+  getAllProductWithLimit (limit: number = 5) {
     const productsUrl: string = this.baseUrl + `products?limit=${limit}`
     return this.http.get<ProductRepresentation[]>(productsUrl)
+  }
+
+  createProduct (product: ProductRepresentation) {
+    const productUrl: string = this.baseUrl + 'products11'
+    return this.http.post<ProductRepresentation>(productUrl, product)
   }
 }
