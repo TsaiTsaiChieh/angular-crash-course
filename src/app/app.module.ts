@@ -9,6 +9,7 @@ import { MessageDetailsComponent } from './message-details/message-details.compo
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
 // import {MyFirstService} from './services/my-first.service';
 
 @NgModule({
@@ -17,7 +18,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     MyFirstCompComponent,
     MessageDetailsComponent,
     MenuComponent,
-    AboutComponent
+    AboutComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
