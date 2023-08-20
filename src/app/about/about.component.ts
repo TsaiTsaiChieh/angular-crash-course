@@ -8,7 +8,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class AboutComponent implements OnInit {
   param: any
-
+  queryParam: any
   constructor(private activatedRouter: ActivatedRoute) {
     
   } 
@@ -17,5 +17,6 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.activatedRouter)
     this.param = this.activatedRouter.snapshot.params['username']
+    this.queryParam= this.activatedRouter.snapshot.queryParams['course']
   }
 }
