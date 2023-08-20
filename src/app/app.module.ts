@@ -10,6 +10,7 @@ import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 // import {MyFirstService} from './services/my-first.service';
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProductsComponent } from './products/products.component';
     MessageDetailsComponent,
     MenuComponent,
     AboutComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
