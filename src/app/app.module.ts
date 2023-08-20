@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MyFirstCompComponent } from './my-first-comp/my-first-comp.component';
 import {FormsModule} from '@angular/forms';
 import { MessageDetailsComponent } from './message-details/message-details.component';
+// import {MyFirstService} from './services/my-first.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MessageDetailsComponent } from './message-details/message-details.compo
     FormsModule,
   ],
   providers: [],
+  // or // providers: [MyFirstService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
