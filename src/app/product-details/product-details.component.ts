@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProductRepresentation } from '../services/api/models/product-representation';
 
 @Component({
   selector: 'app-product-details',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent {
-
+  @Input()
+  product: ProductRepresentation = {}
 }
