@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MyFirstCompComponent } from './my-first-comp/my-first-comp.component';
 import {FormsModule} from '@angular/forms';
 import { MessageDetailsComponent } from './message-details/message-details.component';
+import { MenuComponent } from './menu/menu.component';
 // import {MyFirstService} from './services/my-first.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyFirstCompComponent,
-    MessageDetailsComponent
+    MessageDetailsComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
