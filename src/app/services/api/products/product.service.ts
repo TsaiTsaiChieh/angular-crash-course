@@ -16,7 +16,7 @@ export class ProductService {
   }
 
   createProduct (product: ProductRepresentation) {
-    const productUrl: string = this.baseUrl + 'products11'
+    const productUrl: string = this.baseUrl + 'products'
     return this.http.post<ProductRepresentation>(productUrl, product)
   }
 }
